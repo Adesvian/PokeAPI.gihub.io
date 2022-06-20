@@ -6,8 +6,6 @@ body {
 h1 {
   font-family: "Pokemon Solid", sans-serif;
   font-size: 90px;
-  position: relative;
-  top: -130px;
   text-align: center;
   color: #feca1c;
   text-shadow: 10px 10px #405f90, -4px 7px 8px #000000;
