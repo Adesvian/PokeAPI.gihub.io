@@ -1,5 +1,10 @@
 body {
   background-image: url("background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 /* H1 Text */
@@ -9,6 +14,8 @@ h1 {
   text-align: center;
   color: #feca1c;
   text-shadow: 10px 10px #405f90, -4px 7px 8px #000000;
+  margin-top: 20px;
+  position: relative;
 }
 
 /* Wrapper Body */
@@ -16,10 +23,9 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(144, 144, 144);
+  background-color: rgba(144, 144, 144, 0.6);
   width: 100%;
   height: 100%;
-  opacity: 0.6;
   z-index: -1;
 }
 
@@ -27,10 +33,11 @@ h1 {
 .pokeball {
   cursor: pointer;
   position: absolute;
-  top: 160px;
-  left: 47%;
-  width: 50px;
-  height: 50px;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
   background: #fff;
   border: 5px solid #000;
   border-radius: 50%;
@@ -48,23 +55,24 @@ h1 {
   background: red;
   width: 100%;
   height: 50%;
+  top: 0;
 }
 .pokeball::after {
-  top: calc(60% - 10px);
+  top: calc(50% - 2.5px);
   width: 100%;
   height: 5px;
   background: #000;
 }
 .pokeball__button {
   position: absolute;
-  top: calc(95% - 30px);
-  left: calc(95% - 30px);
-  width: 5px;
-  height: 5px;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
   background: #7f8c8d;
   border: 5px solid #fff;
   border-radius: 50%;
-  z-index: 10;
+  transform: translate(-50%, -50%);
   box-shadow: 0 0 0 5px black;
   animation: blink 0.5s alternate 7;
 }
@@ -79,7 +87,7 @@ h1 {
   }
 }
 @keyframes shake {
-  0 {
+  0% {
     transform: translate(0, 0) rotate(0);
   }
   20% {
@@ -100,20 +108,19 @@ h1 {
 }
 
 #Pokelist {
-  margin-top: -100px;
+  margin-top: 20px;
   text-align: center;
 }
 
 #output {
   font-family: monospace;
-  padding: 50px;
+  padding: 20px;
   text-align: center;
-  display: flex;
-  margin: 15px 15px;
-  border-radius: 10%;
+  display: inline-block;
+  margin: 15px;
+  border-radius: 10px;
   color: #fff;
+  background: rgba(0, 0, 0, 0.5);
   box-shadow: -10px 8px 2px -3px rgba(0, 0, 0, 0.62);
-  -webkit-box-shadow: -10px 8px 2px -3px rgba(0, 0, 0, 0.62);
-  -moz-box-shadow: -10px 8px 2px -3px rgba(0, 0, 0, 0.62);
   border: 1px solid #fff;
 }
